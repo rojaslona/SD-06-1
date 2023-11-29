@@ -3,28 +3,36 @@
 // Your 7 tasks are located in separate files.
 // Open task1.js to begin.
 
-const prompt = require("prompt-sync")();
-let task = parseInt(prompt("Run task [1-7]: "));
+let task;
+let args;
+
+if (process.argv[2]) {
+  task = parseInt(process.argv[2]);
+  args = process.argv.slice(2);
+} else {
+  const prompt = require("prompt-sync")();
+  task = parseInt(prompt("Run task [1-7]: "));
+};
 
 switch (task) {
   case 1:
     require('./task1.js');
     break;
   case 2:
-    require('./task2.js');
+    require('./task2.js')(args);
     break;
   case 3:
-    require('./task3.js');
+    require('./task3.js')(args);
     break;
   case 4:
-    require('./task4.js');
+    require('./task4.js')(args);
     break;
   case 5:
-    require('./task5.js');
+    require('./task5.js')(args);
     break;
   case 6:
-    require('./task6.js');
+    require('./task6.js')(args);
     break;
   case 7:
-    require('./task7.js');
+    require('./task7.js')(args);
 }
