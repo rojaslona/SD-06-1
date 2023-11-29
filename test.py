@@ -3,12 +3,10 @@ import subprocess
 # Boilerplate function - include this in every test below!
 def prepare_and_assert(input_array, output_array):
     # Prepare Variables
-    input_string = ' '.join(input_array)
-    input_data = input_string.encode('utf-8')
     expected_output = '\n'.join(output_array)
 
     # Get Actual Output 
-    output_data = subprocess.run(['node', 'index.js', input_data], stdout=subprocess.PIPE)
+    output_data = subprocess.run(['node', 'index.js'] + input_array, stdout=subprocess.PIPE)
     output_bytes = output_data.stdout.strip()
     output_string = output_bytes.decode("utf-8")
 
