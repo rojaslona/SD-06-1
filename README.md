@@ -11,17 +11,23 @@ For each of these tasks, type your code directly in the task file - the marking 
     * Modify the code so that the subject is the word `hello` and the message is the word `world`.
 
 2. You have been presented with a constructor for a Mail object.
-    * Modify the code so that the user is prompted to input their own subject and message, in that order.
+    * Modify the code so that the user provides their own subject and message as a execution parameters in that order.
+    * Execution parameters are the values that are passed to a program when it is run.
+    * For example, if the user runs the program with the command `node index.js 2 hello world`, then "node" is the program, "index.js" is the first parameter, "2" is the second parameter, and "hello" and "world" are the third and fourth parameters respectively.
+    * You can access the execution parameters in your program by using the `process.argv` array.
+    * In the example, the process and the first parameter (index 0 and 1 of the `process.argv` array) are "node" and "index.js", so you can ignore them.
+    * The second parameter (index 2) is used by this program to determine the task number to execute, so you can ignore it as well.
+    * You can access the subject and message by using `process.argv[3]` and `process.argv[4]` respectively.
 
 3. You have been presented with a constructor for a Mail object.
-    * Modify the code so that the user is prompted to input their own subject and message, in that order.
+    * Modify the code so that the user provides their own subject and message as execution parameters in that order.
     * Then, extend the constructor to include a printMail() method that prints the following to the Console:
         * `<subj>: <msg>`
         * For example, if the two inputs are `hello` and `world`, then the output should be `hello: world`.
 
 4. For this task, you will need to write your own constructor.
-    * Create a new custom object type that will:
-        * 
+    * Create a constructor called Journey that takes two parameters: start and end.
+    * Create a pair of constants called from and to, and assign them the values from the command line arguments.
 
 
 ## Extra Tasks
