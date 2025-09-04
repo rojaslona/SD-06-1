@@ -1,4 +1,36 @@
-# Instrucciones
+# Laboratorio de objetos
+
+## Requisitos previos
+
+Editor de código (ej. VS Code).
+
+Node.js instalado (para ejecutar programas en la terminal).
+
+## Preparación
+
+Clonar el respositorio
+```bash
+git clone sshurl
+```
+Moverse al repositorio clonado
+```bash
+cd nombreDelRepo
+```
+
+Instalar las dependencias
+```bash
+npm install
+```
+Abrir en vscode
+```bash
+code .
+```
+Ejecutar el archivo para ver lo que hace tu código
+```bash
+node --watch nombreArchivo
+```
+
+## Instrucciones
 Los constructores se usan para definir una plantilla para un nuevo tipo de objeto. El operador `new` creará una nueva instancia de ese objeto.
 
 **Hoy, explorarás funciones constructoras y aprenderás a crear tus propios objetos definidos por el usuario.**
